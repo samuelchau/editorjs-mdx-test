@@ -1,15 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState } from 'react';
+import MDX from '@mdx-js/runtime'
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import { default as React, useState } from 'react';
-import MDX from '@mdx-js/runtime'
+import Button from '@material-ui/core/Button';
+import { CustomButton } from './components/CustomComponents';
+import { MyChart } from './components/CustomComponents';
 
 const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: '8px',
     backgroundColor: '#efefef',
-    width: '500px',
   },
 }));
 
@@ -28,6 +30,7 @@ const MdxBlock = (props) => {
     console.log("checkbox label clicked!");
     setIsPreviewEnabled(prevState=>!prevState);
   }
+
 
   return (
     <>
