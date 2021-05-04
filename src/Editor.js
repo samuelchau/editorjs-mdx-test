@@ -2,6 +2,7 @@
 import { default as React, useEffect, useRef } from 'react';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
+import SimpleImage from './block-tools/simple-image/simple-image'; 
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -12,6 +13,13 @@ const DEFAULT_INITIAL_DATA = () => {
         "data": {
           "text": "This is a header.",
           "level": 1
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "url": "https://cdn.pixabay.com/photo/2020/03/07/05/18/coffee-4908764_960_720.jpg",
+          "caption": "Time for a break"
         }
       },
     ]
@@ -52,7 +60,8 @@ const Editor = (props) => {
       },
       autofocus: true,
       tools: { 
-        header: Header, 
+        header: Header,
+        image: SimpleImage,
       }, 
     });
   };
