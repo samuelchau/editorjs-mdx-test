@@ -54,8 +54,8 @@ const MdxBlock = (props) => {
           variant="outlined"
         />
         <div style={{background: "#ddeeee"}}>
-	  <div onClick={handleChange}>
-            <input type="checkbox" id="preview" name="preview" onChange={handleChange} checked={isPreviewEnabled}/>
+	  <div onClick={handleChange}> // This onClick handler is needed as a workaround because somehow the onChange handler inside <input> element does not get triggered.
+            <input type="checkbox" id="preview" name="preview" onChange={handleChange} checked={isPreviewEnabled}/> // The "onChange" handler is not working, possibly due to conflict with EditorJS API.
 	    <label htmlFor="preview">Preview</label>
 	  </div>
           {

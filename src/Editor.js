@@ -5,6 +5,8 @@ import Header from '@editorjs/header';
 import SimpleImage from './block-tools/simple-image/simple-image'; 
 import MdxTool from './block-tools/mdx/mdx-tool'; 
 
+
+// This object contains the data initially loaded to the Editor at start up.
 const DEFAULT_INITIAL_DATA = () => {
   return {
     "time": new Date().getTime(),
@@ -16,13 +18,13 @@ const DEFAULT_INITIAL_DATA = () => {
           "level": 1
         }
       },
-//      {
-//        "type": "image",
-//        "data": {
-//          "url": "https://cdn.pixabay.com/photo/2020/03/07/05/18/coffee-4908764_960_720.jpg",
-//          "caption": "Time for a break"
-//        }
-//      },
+      {
+        "type": "image",
+        "data": {
+          "url": "https://cdn.pixabay.com/photo/2020/03/07/05/18/coffee-4908764_960_720.jpg",
+          "caption": "Time for a break"
+        }
+      },
     ]
   }
 }
@@ -53,12 +55,13 @@ const Editor = (props) => {
       onReady: () => {
         ejInstance.current = editor;
       },
-      onChange: async () => {
-        console.log("onChange()");
-        let content = await this.editorjs.saver.save();
-        // Put your logic here to save this data to your DB
-        setEditorData(content);
-      },
+      // Commented out the follwing as the onChange event is not triggered. Possible issue  https://github.com/codex-team/editor.js/issues/843
+      // onChange: async () => {
+      //   console.log("onChange()");
+      //   let content = await this.editorjs.saver.save();
+      //   // Put your logic here to save this data to your DB
+      //   setEditorData(content);
+      // },
       autofocus: true,
       tools: { 
         header: Header,

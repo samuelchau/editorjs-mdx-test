@@ -33,16 +33,12 @@ export const CustomSelectionBox = (props) => {
     setSelected([...selected, event.target.value]);
   }
 
-  return (options && Array.isArray(options) &&
-
-  <select value={selected} onChange={handleChange} multiple>
-    {
-      options.map((item, index)=>
-        <option key={`${item}-${index}`} value={item} >{item}</option>
-      )
-
-    }
-  </select>
+  return (
+    <select value={selected} onChange={handleChange} multiple>
+      {
+        options.map( (item, index)=> <option key={`${item}-${index}`} value={item} >{item}</option> )
+      }
+    </select>
   )
 }
 
