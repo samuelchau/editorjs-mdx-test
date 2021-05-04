@@ -12,7 +12,7 @@ const DEFAULT_INITIAL_DATA = () => {
       {
         "type": "header",
         "data": {
-          "text": "This is a header.",
+          "text": "Welcome to My Editor",
           "level": 1
         }
       },
