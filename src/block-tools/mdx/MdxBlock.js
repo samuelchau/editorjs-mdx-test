@@ -5,13 +5,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { CustomButton } from './components/CustomComponents';
-import { MyChart } from './components/CustomComponents';
+import { CustomButton, CustomCounter, CustomSelectionBox } from './components/CustomComponents';
 
 const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: '8px',
     backgroundColor: '#efefef',
+    '& .MuiTextField-root': {
+      width: '50ch',
+    },
   },
 }));
 
@@ -19,7 +21,7 @@ const MdxBlock = (props) => {
   const classes = useStyles();
 
   const [mdx, setMdx] = useState(""); // stores the MDX content
-  const [isPreviewEnabled, setIsPreviewEnabled] = useState(true); // enables preview of the MDX rendering or not
+  const [isPreviewEnabled, setIsPreviewEnabled] = useState(false); // enables preview of the MDX rendering or not
 
   const updateMdx = (event) => {
     props.onDataChange(event.target.value);
@@ -31,6 +33,13 @@ const MdxBlock = (props) => {
     setIsPreviewEnabled(prevState=>!prevState);
   }
 
+  // provides the list of custom components available for use in the MDX content
+  const components = {
+    MuiButton: props => <Button {...props}/>,
+    MyButton: props => <CustomButton {...props}/>,
+    MyCounter: props => <CustomCounter {...props}/>,
+    MyFruitSelection: props => <CustomSelectionBox {...props}/>,
+  }
 
   return (
     <>
@@ -38,6 +47,7 @@ const MdxBlock = (props) => {
         <TextField
           id="outlined-multiline-flexible"
           label="Enter MDX Content"
+          placeholder=""
           multiline
           value={mdx}
           onChange={updateMdx}
@@ -50,7 +60,7 @@ const MdxBlock = (props) => {
 	  </div>
           {
             isPreviewEnabled &&
-            <MDX>
+            <MDX components={components}>
               {mdx}
             </MDX>
           }
