@@ -3,6 +3,7 @@ import { default as React, useEffect, useRef } from 'react';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
 import SimpleImage from './block-tools/simple-image/simple-image'; 
+import MdxTool from './block-tools/mdx/mdx-tool'; 
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -15,13 +16,13 @@ const DEFAULT_INITIAL_DATA = () => {
           "level": 1
         }
       },
-      {
-        "type": "image",
-        "data": {
-          "url": "https://cdn.pixabay.com/photo/2020/03/07/05/18/coffee-4908764_960_720.jpg",
-          "caption": "Time for a break"
-        }
-      },
+//      {
+//        "type": "image",
+//        "data": {
+//          "url": "https://cdn.pixabay.com/photo/2020/03/07/05/18/coffee-4908764_960_720.jpg",
+//          "caption": "Time for a break"
+//        }
+//      },
     ]
   }
 }
@@ -62,6 +63,7 @@ const Editor = (props) => {
       tools: { 
         header: Header,
         image: SimpleImage,
+        mdx: MdxTool,
       }, 
     });
   };
@@ -71,12 +73,11 @@ const Editor = (props) => {
       console.log("save content... ", JSON.stringify(savedData, null, 4));
       setOutput(JSON.stringify(savedData, null, 4));
     })
-    
   }
 
   return (
     <React.Fragment>
-      <button id="save-button" onClick={saveEditorContent}>Click to display output</button>
+      <button id="save-button" onClick={saveEditorContent}>Display Editor Output</button>
       <div style={{background: "#cceeee"}} id="output">{output}</div>
       <div id={EDITTOR_HOLDER_ID}> </div>
     </React.Fragment>
