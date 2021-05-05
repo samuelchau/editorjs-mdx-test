@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { CustomButton, CustomCounter, CustomSelectionBox } from './components/CustomComponents';
+import { CustomButton, CustomCounter, CustomSelectionBox, MyChart } from './components/CustomComponents';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +39,7 @@ const MdxBlock = (props) => {
     MyButton: props => <CustomButton {...props}/>,
     MyCounter: props => <CustomCounter {...props}/>,
     MyFruitSelection: props => <CustomSelectionBox {...props}/>,
+    MyChart: () => <MyChart/>,
   }
 
   return (
