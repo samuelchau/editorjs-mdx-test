@@ -48,7 +48,8 @@ const MdxBlock = (props) => {
         <TextField
           id="outlined-multiline-flexible"
           label="Enter MDX Content"
-          placeholder={ `Hint: The list of available custom components include  ${Object.keys(componentsLibrary).toString().replaceAll(",",", ")}.` }
+          placeholder={ `Hints:\nThe list of available custom components includes  ${Object.keys(componentsLibrary).toString().replaceAll(",",", ")}. 
+                         \nClick on the Preview checkbox to enable rendering of your MDX content.` }
           multiline
           value={mdx}
           onChange={updateMdx}
