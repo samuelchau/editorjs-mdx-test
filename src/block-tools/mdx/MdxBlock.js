@@ -34,7 +34,7 @@ const MdxBlock = (props) => {
   }
 
   // provides the list of custom components available for use in the MDX content
-  const components = {
+  const componentsLibrary = {
     MuiButton: props => <Button {...props}/>,
     MyButton: props => <CustomButton {...props}/>,
     MyCounter: props => <CustomCounter {...props}/>,
@@ -48,7 +48,7 @@ const MdxBlock = (props) => {
         <TextField
           id="outlined-multiline-flexible"
           label="Enter MDX Content"
-          placeholder=""
+          placeholder={ `Hint: The list of available custom components include  ${Object.keys(componentsLibrary).toString().replaceAll(",",", ")}.` }
           multiline
           value={mdx}
           onChange={updateMdx}
@@ -63,7 +63,7 @@ const MdxBlock = (props) => {
 	  </div>
           {
             isPreviewEnabled &&
-            <MDX components={components}>
+            <MDX components={componentsLibrary}>
               {mdx}
             </MDX>
           }
