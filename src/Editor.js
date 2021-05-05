@@ -33,7 +33,7 @@ const EDITTOR_HOLDER_ID = 'editorjs';
 
 const Editor = (props) => {
   const ejInstance = useRef();
-  const [editorData, setEditorData] = React.useState(DEFAULT_INITIAL_DATA);
+  //const [editorData, setEditorData] = React.useState(DEFAULT_INITIAL_DATA);
   const [output, setOutput] = React.useState(JSON.stringify(DEFAULT_INITIAL_DATA, null, 4));
 
   // This will run only once
