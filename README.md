@@ -1,70 +1,41 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EditorJS with MDX support
 
-## Available Scripts
+This project is an exercise to learn about EditorJS and MDX and to explore the feasibility of combining both to create something potentially useful for many different application areas.
 
-In the project directory, you can run:
+The created app presents a proof of concept for adding MDX support in EditorJS. This PoC will help us evaluate the usability and the desirability of such a Markdown/MDX Editor feature in our future application's context.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## TL;DR
+You can find the running Editor deployed at https://kind-bhabha-447aff.netlify.app/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The editor is pre-loaded with two blocks of data(H1 heading and image) which are editable.
 
-### `yarn test`
+To add a new MDX block, click on the + and select an MDX block, then enter your MDX content on the Textfield.
+The Preview checkbox when checked enables live rendering of the MDX as you type.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Issues Encoutered
+......
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Basic Concepts of EditorJS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Block Tool
+......
+### Inline Tool
+......
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## References
 
-### `yarn eject`
+https://editorjs.io/creating-a-block-tool
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://mdxjs.com/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://www.walkthrough.so/pblc/QCawSCKwOQLn/creating-a-custom-editorjs-block-tool-with-react
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+https://walkthrough.so/pblc/snKICMzxzedr/codelab-integrating-editor-js-into-your-react-application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### (to be continued, more to come ...)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
