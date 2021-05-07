@@ -14,7 +14,9 @@ The Editor is pre-loaded with two blocks of data(of type H1 heading and image), 
 To add a new MDX block, click on the + and select an MDX block, then enter your MDX content on the Textfield.
 The Preview checkbox when checked enables live rendering of the MDX as you type.
 
-https://user-images.githubusercontent.com/17171717/117476092-cbf12d80-af2a-11eb-9fd3-296ef11a15c0.mp4
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZCfCu6xMYDo
+" target="_blank"><img src="http://img.youtube.com/vi/ZCfCu6xMYDo/0.jpg" 
+alt="Demo of editor-mdx-test" width="240" height="180" border="10" /></a>
 
 As a demo, below is the sequence of steps that were performed in the above video capture:
 1  I first deleted the 1st block(type = "header") , 
