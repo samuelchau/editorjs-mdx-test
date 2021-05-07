@@ -17,12 +17,12 @@ The Preview checkbox when checked enables live rendering of the MDX as you type.
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZCfCu6xMYDo
 " target="_blank"><img src="http://img.youtube.com/vi/ZCfCu6xMYDo/0.jpg" 
 alt="Demo of editor-mdx-test" width="240" height="180" border="10" /></a>
-
-As a demo, below is the sequence of steps that were performed in the above video capture:
+     
+Below is the sequence of steps that were performed in the above video capture:
 1  I first deleted the 1st block(type = "header") , 
 2  Then I deleted the 2nd block(type = "image")
 3  Then I added a new block of type 'mdx' , and then in the textfield **Enter MDX Content**, I started to enter some Markdown/JSX  (which will become part of the content for that block).   The **Preview** checkbox is there for the user to easily see what is the rendered output of the Markdown/JSX that has been entered.
-4 Finally I clicked on the **Display Editor Ouput** button to show the entire JSON output from EditorJS
+4 Finally I clicked on the **Display Editor Output** button to show the entire JSON output from EditorJS
 
 
 ## Challenges and Issues Encountered
