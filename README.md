@@ -9,14 +9,22 @@ The created app presents a proof of concept for adding MDX support in EditorJS. 
 ## TL;DR
 You can find the running Editor deployed at https://kind-bhabha-447aff.netlify.app/
 
-The editor is pre-loaded with two blocks of data(H1 heading and image) which are editable.
+The Editor is pre-loaded with two blocks of data(of type H1 heading and image), which are both editable and removable.
 
 To add a new MDX block, click on the + and select an MDX block, then enter your MDX content on the Textfield.
 The Preview checkbox when checked enables live rendering of the MDX as you type.
 
 
-## Issues Encoutered
-......
+## Challenges and Issues Encountered
+The following is a list of issues encountered
+- Using an 'import' inline in the MDX does not work.  Importing a component for use has to be done at build/bundle time.
+- Default mouse/keypress events of some components seem to be disabled, possibly due to conflict with the default event behaviors set by the EditorJS API.
+- Some of EditorJS APIs are not working as expected, for example, the 'onChange' callback is not triggered when the content changes.
+
+## Improvements and Possible Resolutions
+- Check out the new packages 'mdx-bundle' and 'xdm' to see if they can help to work around the above issues.
+- Dive deeper into the EditorJS API internals to find ways to override the default event behaviors.
+
 
 ## Basic Concepts of EditorJS
 
@@ -24,6 +32,9 @@ The Preview checkbox when checked enables live rendering of the MDX as you type.
 ......
 ### Inline Tool
 ......
+
+
+
 
 ## References
 
