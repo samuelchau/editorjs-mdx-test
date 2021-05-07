@@ -14,6 +14,14 @@ The Editor is pre-loaded with two blocks of data(of type H1 heading and image), 
 To add a new MDX block, click on the + and select an MDX block, then enter your MDX content on the Textfield.
 The Preview checkbox when checked enables live rendering of the MDX as you type.
 
+https://user-images.githubusercontent.com/17171717/117476092-cbf12d80-af2a-11eb-9fd3-296ef11a15c0.mp4
+
+As a demo, below is the sequence of steps that were performed in the above video capture:
+1  I first deleted the 1st block(type = "header") , 
+2  Then I deleted the 2nd block(type = "image")
+3  Then I added a new block of type 'mdx' , and then in the textfield **Enter MDX Content**, I started to enter some Markdown/JSX  (which will become part of the content for that block).   The **Preview** checkbox is there for the user to easily see what is the rendered output of the Markdown/JSX that has been entered.
+4 Finally I clicked on the **Display Editor Ouput** button to show the entire JSON output from EditorJS
+
 
 ## Challenges and Issues Encountered
 The following is a list of issues encountered
